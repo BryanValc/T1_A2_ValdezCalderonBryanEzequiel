@@ -22,6 +22,15 @@ class LayoutNulo extends JFrame{
 		txt1stCheck.setBounds(27,93,127,13);
 		add(txt1stCheck);
 		
+		JCheckBox checkTitle = new JCheckBox("a title for your form");
+		checkTitle.setBounds(25, 109, 150, 20);
+		add(checkTitle);
+		
+		JTextArea txtbMail = new JTextArea( "Subscribe to our mailing list");
+		txtbMail.setBounds(27, 132, 252, 27);
+		txtbMail.setLineWrap(true);
+		txtbMail.setWrapStyleWord(true);
+		add(txtbMail);
 		
 		/*JLabel txtNumControl = new JLabel("Numero de control:");
 		txtNumControl.setBounds(210, 55,50,50);
