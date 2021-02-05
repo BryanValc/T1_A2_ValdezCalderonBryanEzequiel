@@ -6,22 +6,30 @@ class LayoutNulo extends JFrame{
 		
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setTitle("Ejemplo Layout nulo");
-		setSize(300,300);
+		setTitle("Programa GUI [Layout Nulo]");
+		setSize(771,542);
 		setLocationRelativeTo(null);
 		
-		JLabel txtTitulo = new JLabel("Formulario de registro");
-		txtTitulo.setBounds(0,0,300,50);
-		txtTitulo.setBackground(new Color(255,0,0));
+		JLabel txtTitulo = new JLabel("<html>The classic Form includes all visible fields for \n this list.<html>");
+		txtTitulo.setBounds(27,21,230,25);
 		add(txtTitulo);
 		
-		JLabel txtNumControl = new JLabel("Numero de control:");
+		JLabel txtFormOptions = new JLabel("Form options");
+		txtFormOptions.setBounds(27,70,77,13);
+		add(txtFormOptions);
+		
+		JLabel txt1stCheck = new JLabel("Include the following");
+		txt1stCheck.setBounds(27,93,127,13);
+		add(txt1stCheck);
+		
+		
+		/*JLabel txtNumControl = new JLabel("Numero de control:");
 		txtNumControl.setBounds(210, 55,50,50);
 		add(txtNumControl);
 		
 		JTextField cajNumControl = new JTextField(10);
 		cajNumControl.setBounds(170,55,50,50);
-		add(cajNumControl);
+		add(cajNumControl);*/
 		
 		setVisible(true);
 		
