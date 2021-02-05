@@ -1,7 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 class LayoutNulo extends JFrame{
+	
+	private static final String EMAIL_PATTERN = 
+		    "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+		    + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+	
 	public LayoutNulo() {
 		
 		getContentPane().setLayout(null);
@@ -98,10 +106,8 @@ class LayoutNulo extends JFrame{
 		txtEAddress.setBounds(296,66,136,9);
 		add(txtEAddress);
 		
-		JTextArea txtbEAddress = new JTextArea();
+		JFormattedTextField txtbEAddress = new JFormattedTextField();
 		txtbEAddress.setBounds(296, 80, 419, 25);
-		txtbEAddress.setLineWrap(true);
-		txtbEAddress.setWrapStyleWord(true);
 		add(txtbEAddress);
 		
 		JLabel txtFName = new JLabel("First Name");
@@ -124,9 +130,33 @@ class LayoutNulo extends JFrame{
 		txtbLName.setWrapStyleWord(true);
 		add(txtbLName);
 		
-		JButton btnSub = new JButton("Subscribe");
-		btnSub.setBounds(297, 221, 95, 25);
+		Icon icon = new ImageIcon("./archivos/sent.PNG");
+		JButton btnSub = new JButton(icon);
+		btnSub.setBounds(297, 221, 53, 53);
 		add(btnSub);
+		
+		
+		
+		/*btnSub.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(btnSub.getModel().isPressed()) {
+			        System.out.println("the button is pressed");
+			        };
+			        
+			        
+			}
+		});*/
+		
+		/*String email = txtEAddress.getText();
+		if (!email.matches(EMAIL_PATTERN)) {}
+		
+		JFrame parent = new JFrame();
+	    JOptionPane.showMessageDialog(parent, "Correo no valido");*/
+		
+		
+		
+		
 		
 		
 		JLabel txtCp = new JLabel("Copy/paste onto your site");
@@ -179,6 +209,10 @@ class LayoutNulo extends JFrame{
 		add(scroll);
 	    
 		setVisible(true);
+		
+		
+		
+		
 		
 		
 	}
